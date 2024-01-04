@@ -5,23 +5,21 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 
 const Homepage = () => {
-    const searchInput = useSelector((store) => {
-        // console.log(store)
-        return store.searchInput;
-      });
-      let array = searchInput.array;
-      let key = searchInput.key;
+  const searchInput = useSelector((store) => {
+    return store.searchInput;
+  });
+  let key = searchInput.key;
   return (
     <DIV>
       <InputForm />
-      {key&&<BinarySearch />}
+      {key && <BinarySearch />}
     </DIV>
   );
 };
 
 export default Homepage;
 
-const DIV=styled.div`
-    display: flex;
-    justify-content: space-between;
-`
+const DIV = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;

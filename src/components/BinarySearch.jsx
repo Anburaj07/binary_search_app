@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 const BinarySearch = () => {
   const searchInput = useSelector((store) => {
-    // console.log(store)
     return store.searchInput;
   });
   let array = searchInput.array;
@@ -33,7 +32,6 @@ const BinarySearch = () => {
   if (key) {
     binarySearch(array, key);
   }
-  console.log(state);
 
   return (
     <DIV>
@@ -71,11 +69,11 @@ const DIV = styled.div`
   background-color: #64c764;
   border-radius: 10px;
 
-  h2{
+  h2 {
     color: #a31188;
   }
 
-  h1{
+  h1 {
     color: #a35311;
   }
 `;

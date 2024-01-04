@@ -6,14 +6,14 @@ import { useDispatch } from "react-redux";
 const InputForm = () => {
   const [array, setArray] = useState("");
   const [key, setKey] = useState("");
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
 
   const handleSearch = (e) => {
     e.preventDefault();
     const arrayInput = array.split(",").map((num) => parseInt(num, 10));
     const keyInput = parseFloat(key, 10);
-    console.log(arrayInput,keyInput)
-    dispatch(setSearchInput({array:arrayInput,key:keyInput}))    
+    console.log(arrayInput, keyInput);
+    dispatch(setSearchInput({ array: arrayInput, key: keyInput }));
   };
   return (
     <DIV>
@@ -58,7 +58,7 @@ const DIV = styled.div`
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
-  h2{
+  h2 {
     color: #a31188;
   }
   button {
@@ -77,7 +77,7 @@ const DIV = styled.div`
     margin-left: 10px;
     font-size: 20px;
   }
-  label{
+  label {
     font-size: 20px;
   }
 `;
