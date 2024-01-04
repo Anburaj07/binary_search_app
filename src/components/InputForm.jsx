@@ -11,7 +11,7 @@ const InputForm = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     const arrayInput = array.split(",").map((num) => parseInt(num, 10));
-    const keyInput = parseFloat(key, 10);
+    const keyInput = parseInt(key, 10);
     console.log(arrayInput, keyInput);
     dispatch(setSearchInput({ array: arrayInput, key: keyInput }));
   };

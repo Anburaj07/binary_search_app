@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 
@@ -17,7 +16,7 @@ const BinarySearch = () => {
     while (l <= h) {
       let mid = Math.floor((l + h) / 2);
       midArray.push(mid);
-      if (arr[mid] == key) {
+      if (arr[mid] === key) {
         state = "found";
         return;
       } else if (key < arr[mid]) {
@@ -45,7 +44,7 @@ const BinarySearch = () => {
       {midArray.map((mid) => (
         <div style={{ display: "flex", justifyContent: "center" }}>
           {array.map((el, ind) => (
-            <BOX style={{ backgroundColor: ind == mid && "#2745c9" }} key={ind}>
+            <BOX style={{ backgroundColor: ind === mid && "#2745c9" }} key={ind}>
               {el}
             </BOX>
           ))}
